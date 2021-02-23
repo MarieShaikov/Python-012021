@@ -55,7 +55,8 @@ morseCode = {
     "(": "-.--.",
     ")": "-.--.-"
 }
-text = "ah"
+
+text = input("Insert a word using lower case only")
 for letters in text:
     if letters == " ":
         print("/")
