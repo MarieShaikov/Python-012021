@@ -9,3 +9,9 @@ volnePokoje = {
   11: [],
   12: ["Amadeus", "Vlasy"]
 }
+time = input("When is your meeting?")
+time = int(time)
+if time in volnePokoje:
+  print(len(volnePokoje[time]))
+else:
+  print("no rooms")
