@@ -19,3 +19,11 @@ prodeje2020 = {
     "Zločinný steh": 5412,
     "Zkus mě chytit": 6671,
 }
+
+name = input("What is the name of the book?")
+sales = 0
+if name in prodeje2019:
+    sales += prodeje2019[name]
+if name in prodeje2020:
+    sales += prodeje2020[name]
+print(sales)
