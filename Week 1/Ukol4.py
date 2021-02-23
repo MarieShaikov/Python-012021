@@ -55,3 +55,9 @@ morseCode = {
     "(": "-.--.",
     ")": "-.--.-"
 }
+text = "ah"
+for letters in text:
+    if letters == " ":
+        print("/")
+    else:
+        print(morseCode[letters], end=' ')
