@@ -23,7 +23,11 @@ prodeje2020 = {
 name = input("What is the name of the book?")
 sales = 0
 if name in prodeje2019:
-    sales += prodeje2019[name]
+    sales += prodeje2019.get(name)
 if name in prodeje2020:
-    sales += prodeje2020[name]
+    sales += prodeje2020.get(name)
 print(sales)
+
+#dictionary = {"Name": "Harry", "Age": 17}
+#dictionary["Name"]
+#dictionary.get("Name")
