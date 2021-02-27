@@ -26,7 +26,7 @@ amount = int(amount)
 if (code in sklad) and (amount <= sklad[code]):
     sklad[code] = sklad[code] - amount
     print("All items are available")
-elif (code in sklad) and (amount >= sklad[code]):
+elif (code in sklad) and (amount > sklad[code]):
     sklad.pop(code)
     print("limited number of items")
 else:
