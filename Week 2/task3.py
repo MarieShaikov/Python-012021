@@ -10,3 +10,8 @@ plates = {"4A2 3000": "František Novák",
   "1P5 5269": "Marta Nováková",
   "37E 1252": "Martina Matušková",
   "2A5 2241": "Jan Král"}
+
+
+for key, value in plates.items():
+    if key[1] == 'P':
+        print(key)

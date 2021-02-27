@@ -13,9 +13,8 @@ baliky = {
     "B947X": False,
 }
 code = input("What is the package code?")
-if code in baliky:
-    if baliky[code] == True:
+if baliky[code] == True:
         print("The package is with curier")
-    else:
+else:
         print("The package has not been delivered to currier yet")
 
