@@ -508,7 +508,8 @@ for item in staty:
 else:
     print("Unknown region")
 
-
 #Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
 # Následně projdi seznam a vypiš všechny státy, které leží v regionu.
 # Pokud program žádný stát pro daný region nenajde, vypiš text "Neznámý region".
+
+
