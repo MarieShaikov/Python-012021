@@ -488,8 +488,10 @@ staty = [
      'area': 752612.0, 'gini': 54.6},
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
-reg = input("What region are you interested in?") #Asia
+# reg = input("What region are you interested in?") #Asia
+reg = "Europe"
 d = {}
+x = 1
 for item in staty:  #item is dictionary
     if item['region'] == reg: #Asia
         subregion = item['subregion'] # Western Asia
