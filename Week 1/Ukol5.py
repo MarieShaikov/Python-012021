@@ -20,12 +20,16 @@ prodeje2020 = {
     "Zkus mě chytit": 6671,
 }
 
-name = input("What is the name of the book?")
-sales = 0
-if name in prodeje2019:
-    sales += prodeje2019.get(name)
-if name in prodeje2020:
-    sales += prodeje2020.get(name)
+#name = input("What is the name of the book?")
+#sales = 0
+#if name in prodeje2019:
+ #   sales += prodeje2019.get(name)
+#if name in prodeje2020:
+ #   sales += prodeje2020.get(name)
+#print(sales)
+
+name = input("The name of the book: ")
+sales = prodeje2020.get(name, 0) + prodeje2019.get(name, 0)
 print(sales)
 
 #dictionary = {"Name": "Harry", "Age": 17}
