@@ -1,5 +1,6 @@
 #SMS brána
-#Uvažuj, že píšeš jednoduchou aplikaci pro zasílání SMS zpráv. Napiš program, který provede následující činnosti:
+#Uvažuj, že píšeš jednoduchou aplikaci pro zasílání SMS zpráv. Napiš program,
+# který provede následující činnosti:
 
 #Zeptá se uživatele na číslo, kam chce zprávu zaslat a ověří, že číslo má správný formát.
 #Zeptá se uživatele na zprávu, kterou chce zaslat. Následně vypíše, kolik zpráva bude stát.
@@ -19,3 +20,6 @@
 
 tel_cislo = "+420 734 123 456"
 tel_cislo = tel_cislo.replace(" ", "")
+
+number = input('What is your numerer?:')
+def
