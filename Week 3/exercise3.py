@@ -23,6 +23,6 @@ class Employee:
         self.probation = probation
 
 
-george = Employee('George Nufi', 'dirty worker')
-klara = Employee('`klara noava', 'editor')
+george = Employee('George Nufi', 'worker')
+klara = Employee('`klara nova', 'editor')
 print(george)
