@@ -22,7 +22,7 @@
 #tel_cislo = "+420 734 123 456"
 #tel_cislo = tel_cislo.replace(" ", "")
 
-def lenght_number(number):
+def length_number(number):
     if len(number) in (9, 13):
         return True
     else:
@@ -36,8 +36,8 @@ number = input('What is your number?:')
 
 number = number.replace(" ", "")
 
-if lenght_number(number) == True:
+if length_number(number) == True:
     message = input("Write the message: ")
-    print(lenght_number(number), f'the cost of the message is: {price(message)}')
+    print(length_number(number), f'the cost of the message is: {price(message)}')
 else:
     print("false")
