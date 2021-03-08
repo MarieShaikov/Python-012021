@@ -32,8 +32,6 @@ def chance_of_success(industry, money, country, conference=False, newsletter=Fal
         total += 3
     elif industry == "retail":
         total += 2
-    else:
-        total += 0
     if money <= 10:
         total += 0
     elif 10 <= money <= 1000:
@@ -44,8 +42,6 @@ def chance_of_success(industry, money, country, conference=False, newsletter=Fal
         total += 2
     elif country in ["Germany", "France"]:
         total += 1
-    else:
-        total += 0
     if conference:
         total += 1
     if newsletter:
