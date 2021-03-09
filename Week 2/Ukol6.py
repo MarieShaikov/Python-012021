@@ -501,9 +501,11 @@ staty = [
      'area': 752612.0, 'gini': 54.6},
     {'name': 'Zimbabwe', 'capital': 'Harare', 'region': 'Africa', 'subregion': 'Eastern Africa', 'population': 14240168,
      'area': 390757.0}]
+region_found = False
 reg = input("What region are you interested in?")
 for item in staty:
     if item['region'] == reg:
+        region_found = True
         print(item['name'])
 else:
     print("Unknown region")
@@ -511,5 +513,7 @@ else:
 #Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
 # Následně projdi seznam a vypiš všechny státy, které leží v regionu.
 # Pokud program žádný stát pro daný region nenajde, vypiš text "Neznámý region".
-
-
+#
+# Tady by se ti prave hodila ta bool promenna napriklad region_found , ktera by nazacatku byla False a
+# pokud by si se dostala az do ifu (506-507)
+# tak bys ji prepsala na True, a print o neznamem regionu by jsi delala jen pokud je promenna False.
