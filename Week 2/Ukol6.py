@@ -1,14 +1,14 @@
-#Státy světa
-#V kódu níže na stránce vidíš seznam slovníků s informacemi o státech světa.
+# Státy světa
+# V kódu níže na stránce vidíš seznam slovníků s informacemi o státech světa.
 # O každém státu tam vidíš následující informace:
 
-#název státu (name),
-#hlavní město (capital),
-#region (region),
-#subregion (subregion),
-#populace (population),
-#rozloha (area),
-#Giniho koeficient (gini).
+# název státu (name),
+# hlavní město (capital),
+# region (region),
+# subregion (subregion),
+# populace (population),
+# rozloha (area),
+# Giniho koeficient (gini).
 
 
 staty = [
@@ -507,10 +507,21 @@ for item in staty:
     if item['region'] == reg:
         region_found = True
         print(item['name'])
-else:
-    print("Unknown region")
+    else:
+        region_found
 
-#Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
+
+# Ted koukam ze jsem u 6. prikladu prehledla ze tam mas for + else,
+# nebude to fungovat tak jak si predstavujes, else vetev se provede vzdy,
+# ikdyz tam ten region ve slovniku existuje (zkus si to).
+# Funguje to tak ze else vetev za for se provede vzdy pokud behem for smycky nenastane break
+# (klicove slovo, ktere dovoluje opustit for cyklus drive nez dojde do konce).
+#
+# Tady by se ti prave hodila ta bool promenna napriklad region_found ,
+# ktera by nazacatku byla False a pokud by si se dostala az do ifu (506-507)
+# tak bys ji prepsala na True, a print o neznamem regionu by jsi delala jen pokud je promenna False.
+
+# Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
 # Následně projdi seznam a vypiš všechny státy, které leží v regionu.
 # Pokud program žádný stát pro daný region nenajde, vypiš text "Neznámý region".
 #
