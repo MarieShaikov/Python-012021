@@ -16,7 +16,7 @@
 # Vytvoř objekty, které reprezentují všechny automobily půjčovny.
 
 class Car:
-    def __init__(self, reg_number, car_type, km_number,available = True):
+    def __init__(self, reg_number, car_type, km_number, available=True):
         self.reg_number = reg_number
         self.car_type = car_type
         self.km_number = km_number
@@ -29,10 +29,8 @@ class Car:
         return  f"Car with registration number {self.reg_number} " \
                f"{self.car_type}, {self.km_number} number of kilometers is currently not available."
 
-cars = Car("4A2 3020", "Peugeot 403 Cabrio", 47534, True)
-print(cars.get_info())
-
-
-# 4A2 3020	Peugeot 403 Cabrio	47534
-# 1P3 4747	Škoda Octavia	41253
+car1 = Car("4A2 3020", "Peugeot 403 Cabrio", 47534, available=False)
+print(car1.get_info())
+car2 = Car("1P3 4747", "Škoda Octavia", 41253)
+print(car2.get_info())
 
