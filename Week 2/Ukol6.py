@@ -507,11 +507,9 @@ for item in staty:
     if item['region'] == reg:
         region_found = True
         print(item['name'])
-    else:
-        region_found
 
 if not region_found:
-    print('Neznamy region')
+    print('Unknown region')
 
 
 # Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
