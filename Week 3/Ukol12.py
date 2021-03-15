@@ -3,7 +3,8 @@
 #
 # Třídě Auto přidej funkci pujc_auto(), která nebude mít (kromě obligátního self) žádný parametr.
 # Funkce zkontroluje, jestli je vozidlo aktuálně volné. Pokud je volné, změní hodnotu atributu,
-# který určuje, zda je vozidlo půjčené, a vrátí text "Potvrzuji zapůjčení vozidla". Pokud je vozidlo již půjčené,
+# který určuje, zda je vozidlo půjčené, a vrátí text "Potvrzuji zapůjčení vozidla".
+# Pokud je vozidlo již půjčené,
 # vrátí text "Vozidlo není k dispozici".
 #
 # Dále tříde Auto přidej funkci get_info(), která vrátí informaci o vozidle (stačí registrační značka a značka a
@@ -15,3 +16,17 @@
 #
 # Dotaz na uživatele a výpis výsledků si v programu zkopíruj, abys dokázala otestovat,
 # že funkce nedovolí půjčit stejné auto dvakrát.
+
+class Car:
+    def __init__(self, reg_number, car_type, km_number, available=True):
+        self.reg_number = reg_number
+        self.car_type = car_type
+        self.km_number = km_number
+        self.available = available
+
+    def get_info(self):
+        if self.available:
+            return f"Car with registration number {self.reg_number}, " \
+               f" {self.car_type}, {self.km_number} number of kilometers is currently available."
+        return  f"Car with registration number {self.reg_number} " \
+               f"{self.car_type}, {self.km_number} number of kilometers is currently not available."

@@ -510,6 +510,9 @@ for item in staty:
     else:
         region_found
 
+if not region_found:
+    print('Neznamy region')
+
 
 # Vytvoř program, který se uživatele zeptá na region, který ho zajímá.
 # Následně projdi seznam a vypiš všechny státy, které leží v regionu.
