@@ -11,8 +11,17 @@ staty = staty.set_index("name")
 # print(staty[["population", "area"]]) #if more than one variable, use double brackets [[ ]]
 #
 
-populace = staty["population"] #prevod do typu serie
-print(populace.sum())
+# populace = staty["population"] #prevod do typu serie
+# print(populace.sum())
+#
+# pidistaty = (staty[staty["population"] < 1000]) #return only countries will less than 1000 population
+# print(pidistaty[["area", "population"]]) #chybejicic data u rozhlohy - tohle by se melo filtrovat, cleaning data is important
+#
+# EU_high_population = staty[(staty["population"] > 20_000_000) & (staty["region"] == "Europe")]
+# print(EU_high_population) #dve podminky, zeme v EU a s populaci vetsi nez 20mil,
+                            # obe podminky jsou spojene znakem & (and)
 
-pidistaty = (staty[staty["population"] < 1000]) #return only countries will less than 1000 population
-print(pidistaty[["area", "population"]]) #chybejicic data u rozhlohy - tohle by se melo filtrovat, cleaning data is important
+important_states = staty[(staty["population"] > 2_000_000_000)| (staty["area"] > 3_000_000)]
+print(important_states) #jedna ze svou podminek musi byt pravdiva:
+                        # zeme z vetsi populaci nez 1 miliarda NEBO rozloha vetsi nez 3mil
+
