@@ -14,11 +14,15 @@ class Employee:
         return f"{self.name} works as {self.position}."
 
     def get_tax(self):
-        return f"{salary} * 0.15 - ({children} * 1500)."
+        return self.salary * 0.15 - (self.children * 1500)
+
+    def netto(self):
+        return self.salary - self.get_tax()
 
 
-c = Employee("George", "teacher", 50_000, 2)
-print(c.get_info, c.get_tax)
+c = Employee("George", "teacher", 80_000, 2)
+print(c.get_info())
+print("This is your netto salary: ", c.netto())
 
 # Nyní se budeme zabývat platem. Přidej třídě atribut salary (výše hrubého platu) a
 # children (počet dětí), jehož výši nastavíš ve funkci __init__().
