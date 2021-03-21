@@ -4,33 +4,25 @@
 # 1. 7. 2021 - 10. 8. 2021	250 Kč
 # 11. 8. 2021 - 31. 8. 2021	180 Kč
 # Mimo tato data je středisko zavřené.
-#
+
 
 from datetime import datetime
 
-def price_cinema(date_ticket):
-
-    first= datetime(2021,7,1)
-    second= datetime (2021,8,10)
-    third=datetime(2021,8,11)
-    fourth=datetime(2021,8,31)
-
-    if (date_ticket > first) and (date_ticket < second):
-        return 250
-    elif (date_ticket > third) and (date_ticket < fourth):
-        return 180
+def price_cinema(date_ticket, number_people):
+    if (date_ticket > datetime(2021,7,1)) and (date_ticket < datetime(2021,8,10)):
+        return (250 * (number_people))
+    elif (date_ticket > datetime(2021,8,11)) and (date_ticket < datetime(2021,8,31)):
+        return (180 * (number_people))
     else:
         return("The cinema is closed")
 
 
-date_ticket = "02.07.2021"
-number = 2
+
+date_ticket = input("Insert the date: ")
+number = int(input("Number of people: "))
 
 x = datetime.strptime(date_ticket, '%d.%m.%Y')
-print(price_cinema(x))
-
-
-#x = input(f" Date is: {date}, number of people: {number})
+print(price_cinema(x, number))
 
 
 # Tvůj program se nejprve zeptá uživatele na datum a počet osob,
