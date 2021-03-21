@@ -22,7 +22,7 @@ class Employee:
 
 c = Employee("George", "teacher", 80_000, 2)
 print(c.get_info())
-print("This is your netto salary: ", c.netto())
+print("This is your netto salary:", c.netto())
 
 # Nyní se budeme zabývat platem. Přidej třídě atribut salary (výše hrubého platu) a
 # children (počet dětí), jehož výši nastavíš ve funkci __init__().
