@@ -6,6 +6,7 @@
 #   def __init__(self, jmeno, email):
 #     self.jmeno = jmeno
 #     self.email = email
+
 # Vytvoř třídu Uchazec, která bude dědit od třídy Kontakt a která reprezentuje uchazeče o
 # práci. Uchazeč o práci bude mít navíc atribut datum_pohovoru a zapis_z_pohovoru.
 # Datum pohovoru objekt získá z parametru a zápis z pohovoru je na začátku prázdný řetězec "".
