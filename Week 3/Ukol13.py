@@ -25,7 +25,9 @@ class Car:
         return f"Car with registration number {self.reg_number} " \
                f"{self.car_type}, {self.km_number} number of kilometers is currently not available."
 
-    def car_return(self, days):
+    def car_return(self, days, speedometer):
+        self.km_number += speedometer
+        self.available = True
         if days <= 7:
             return "The price for rent is", (300 * days)
         else:
@@ -41,16 +43,15 @@ if x == "Peugeot":
 elif x == "Skoda":
     print(car2.get_info(), car2.car_rent())
 
-
 speedometer = int(input("How many km have you driven?"))
 days = int(input('How many days did you rent the car for?'))
 
 
 if x == "Peugeot":
-    print(car1.car_return(days))
+    print(car1.car_return(days, speedometer))
 
 if x == "Skoda":
-    print(car2.car_return(days))
+    print(car2.car_return(days, speedometer))
 
 
 
