@@ -11,7 +11,28 @@ u202["mistnost"] = "u202"
 u203["mistnost"] = "u203"
 u302["mistnost"] = "u302"
 
-exam = pandas.concat([u202, u203, u302], ignore_index=True)
+exam = pandas.concat([u202], ignore_index=True)
 print(exam.head)
 
-#exam.to_csv("Maturita.csv", index=False)
+exam.to_csv("Maturita.csv", index=False)
+
+#join the above tables with new table studenti,
+# default merge of table in pandas is "inner join", other types are: outer join, left join, right join
+
+students = pandas.read_csv('studenti.csv')
+
+merged_tables = pandas.merge(exam, students, how="left")
+
+#print(u202.shape)
+
+teachers = pandas.read_csv('predsedajici.csv')
+merged_tables_teachers = pandas.merge(merged_tables, teachers, on=["den"])
+print(merged_tables_teachers.head)
+
+print(exam.groupby('predmet')['znamka'].mean())
+
+print(exam.groupby('predmet')['znamka'].max())
+
+
+nakupy = pandas.read_csv('../nakupy.csv')
+print(nakupy.groupby('Jméno').sum())
