@@ -1,5 +1,5 @@
 import pandas
-staty = pandas.read_json('staty.json')
+staty = pandas.read_json('../Week 7/staty.json')
 #print(countries.head)
 staty = staty.set_index("name")
 print(staty.index)
