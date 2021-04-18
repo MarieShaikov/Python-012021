@@ -12,5 +12,5 @@ class MujPrvniPohled(View):
         return HttpResponse('Vítej na webu Czechitas!')
 
 class KurzyView(ListView):
-    model = models.Kurzy
+    model = models.Kurz
     template_name = "kurzy/kurzy.list.html"

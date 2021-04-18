@@ -77,9 +77,8 @@ WSGI_APPLICATION = 'czechitas.wsgi.application'
 DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'czechitas',
-    'USER': 'postgres',
-    'PASSWORD': 'postgres',
+    'NAME': 'postgres',
+    'USER': 'marieshaikovski',
     'HOST': 'localhost',
     'PORT': '5432',
   }
