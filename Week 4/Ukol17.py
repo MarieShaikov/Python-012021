@@ -35,7 +35,6 @@ class Polozka:
         self.name = name
         self.genre = genre
 
-
     def get_info(self):
         return f"The name is {self.name} and the genre of this item is {self.genre} "
 
@@ -48,36 +47,45 @@ class Film(Polozka):
     def get_info(self):
         return f"The length of this film is {self.length} "
 
+    def total_length(self):
+        return self.length
+
 
 class TvShow(Polozka):
-    def __init__(self, number_episode, length_episode, name, genre):
-        self.get_total_length = (number_episode * length_episode)
-        self.number_episode = number_episode
+    def __init__(self, number_of_episodes, length_episode, name, genre):
+        self.number_of_episodes = number_of_episodes
         self.length_episode = length_episode
         super().__init__(name, genre)
 
-
     def get_info(self):
-        return f"This TV show has {self.number_episode} number of episodes and the length of each episode is {self.length_episode}, "
+        return f"This TV show has {self.number_of_episodes} number of episodes "\
+               f"and the length of each episode is {self.length_episode}, "
 
-    def get_total_length(self, number_episode, length_episode):
-        self.get_total_length = (number_episode * length_episode)
-        return f"The total length of this TV show is {self.get_total_length} "
+    def total_length(self):
+        return self.number_of_episodes * self.length_episode
 
-class User():
+
+class User:
     def __init__(self, name, watching_length=0):
         self.name = name
         self.watching_length = watching_length
 
-    def add_total_length(self, watching_length):
-        watching_length += self
-        return f"This user watched in total {watching_length} of minutes"
+    def add_total_length(self, length):  # 900 ; 180
+        self.watching_length += length
 
-x = User("Marie", 300)
-y = TvShow(15, '60 minutes', 'Crown', 'history drama')
-print(y.get_info())
 
-Vytvoř objekt, který reprezentuje nějakého uživatele.
+crown = TvShow(15, 60, 'Crown', 'history drama')
+potter = Film(180, 'Harry Potter', 'fantasy')
+
+marie = User("Marie")
+
+marie.add_total_length(crown.total_length())
+marie.add_total_length(potter.total_length())
+
+print(marie.watching_length)
+
+
+# Vytvoř objekt, který reprezentuje nějakého uživatele.
 # Následně zkus uvažovat situaci, že uživatel zhlédne film a seriál,
 # které jsi vytvořil(a) jako objekty. Uživateli připočti délky děl k délce sledování,
 # využij k tomu funkci get_celkova_delka() u objektu a seriálu, abys zjistil(a),
