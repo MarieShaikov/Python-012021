@@ -15,15 +15,28 @@
 # jako druhé parametr zkratku zdrojové měny a jako třetí parametr množství požadovaných dolarů.
 # Funkce vypočte, kolik jednotek zdrojové měny je potřeba zaplatit, aby to odpovídalo požadovanému množství cílové měny.
 #
-# from forex_python.converter import CurrencyRates
-# prevodnik = CurrencyRates()
-# pozadovano_v_cilove_mene = 10
-# cena_v_korunach = prevodnik.convert('USD', 'CZK', pozadovano_v_cilove_mene)
-# print(cena_v_korunach)
+
+from forex_python.converter import CurrencyRates
+initial_currency = input("What is your initial currency?")
+prevodnik = CurrencyRates()
+pozadovano_v_cilove_mene = int(input("How much money you need in the desired currency?"))
+
+final_currency = prevodnik.convert('USD', initial_currency, pozadovano_v_cilove_mene)
+print(int(final_currency))
+
+
 # Zkus program upravit tak, aby zjistil požadovanou měnu od uživatele (pomocí funkce input()).
 # Uvažuj, zkus např. pracovat s měnami EUR, GBP nebo DKK. Následně od uživatele získej i
 # požadované množství cílové měny. Nezapomeň toho množství převést na typ int.
 #
+from forex_python.bitcoin import BtcConverter
+b = BtcConverter()
+initial_currency = input("What is your initial currency?")
+pozadovano_v_cilove_mene = int(input("How many Bitcoin do you want?"))
+
+final_currency = b.convert_to_btc(pozadovano_v_cilove_mene, initial_currency)
+print(final_currency)
+
 # Pokročilejší varianta
 # Podívej se do dokumentace k modulu forex-python. Zjistíš, že umí pár dalších zajímavých věcí,
 # například převod měny do Bitcoinu. Zkus pomocí modulu vytvořit program,

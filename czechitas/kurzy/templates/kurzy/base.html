@@ -1,0 +1,7 @@
+{{% block content %}
+<ul>
+    {% for kurz in object_list %}
+    <li>{{ kurz.nazev }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
