@@ -24,7 +24,7 @@ class Applicant(Kontakt):
             return "The text has been saved"
 
 x = Applicant(date(2021, 3, 21), "Marie", "m.@gmail.com")
-y = x.save_notes("Ahoj, dej mi praci", date.today())
+y = x.save_notes("Ahoj", date.today())
 print(y)
 print(x.interview_notes)
 
