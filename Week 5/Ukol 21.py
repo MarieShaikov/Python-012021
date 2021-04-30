@@ -46,6 +46,6 @@ print(increase_value) # the value has increased by 257%
 # což je základ jednoho z akciových ukazatelů (price range).
 
 max = (companies.High.max()) # max = 457.3
-min = (companies.High.min()) # min = 78
+min = (companies.Low.min()) # min = 68
 price_range = max - min
-print(price_range) # price range is 379.3
+print(price_range) # price range is 389.2
