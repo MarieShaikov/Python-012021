@@ -16,17 +16,29 @@
 #
 # print(generator_falesnych_dat.name())
 # print(generator_falesnych_dat.address())
-# Pojďme si modul vyzkoušet. Níže je třída Balik, která se podobá třídě, která už jsme vytvářeli během lekce.
-# Náš balík má příjemce a adresu.
+
+#Pojďme si modul vyzkoušet. Níže je třída Balik, která se podobá třídě, která už jsme vytvářeli během lekce.
+#Náš balík má příjemce a adresu.
 #
-# class Balik:
-#   def get_info(self):
-#     print(f"Příjemce balíku: {self.name}")
-#     print("Balík doručte na adresu: " + self.address)
-#
-#   def __init__(self, name, address):
-#     self.name = name
-#     self.address = address
+
+from faker import Faker
+fake = Faker("cs_CZ")
+
+class Balik:
+
+  def get_info(self):
+        return f"Příjemce balíku: {self.name}", \
+               f"Balík doručte na adresu: {self.address}"
+
+  def __init__(self, name, address):
+    self.name = name
+    self.address = address
+
+
+x = Balik(fake.name(), fake.address())
+print(x.get_info())
+
+
 # Zkus nyní vytvořit nějaký objekt ze třídy Balik a přiřadit mu náhodně vygenerované jméno příjemce a adresu.
 # Pomocí funkce get_info() si nech informace o balíku vypsat.
 #
