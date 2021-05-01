@@ -35,7 +35,7 @@ print(jmena.loc[:,"věk" : "původ"])
 # Vypiš všechna jména, která mají svátek první 3 dny v únoru.
 
 
-old = jmena[(jmena["věk"] > 60 )]
+old = jmena[jmena["věk"] > 60]
 print(old)
 
 ukol2 = jmena[(jmena["četnost"] < 80_000) & (jmena["četnost"] < 100_000)]
