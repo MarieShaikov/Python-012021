@@ -1,5 +1,5 @@
 import pandas
-jobs = pandas.read_csv('../DataAnalyst.csv')
+jobs = pandas.read_csv('DataAnalyst.csv')
 print(jobs.columns)
 print(jobs.head)
 print(jobs.shape)
