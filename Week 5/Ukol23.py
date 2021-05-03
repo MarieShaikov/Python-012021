@@ -15,7 +15,7 @@ print(total)
 
 # Dotaz na řádky, kde 2021-03-10 bylo naočkováno více než 1 mil. obyvatel.
 
-vaccination = df[(df["date"] == "2021-03-10") & (df["total_vaccinations"] < 1_000_000)]['total_vaccinations']
+vaccination = df[(df["date"] == "2021-03-10") & (df["total_vaccinations"] > 1_000_000)]['total_vaccinations']
 print(vaccination)
 
 # Podíváme se na extrémní hodnoty. Napiš dotaz na řádky, kde za daný den naočkování více než 100 tisíc lidí
