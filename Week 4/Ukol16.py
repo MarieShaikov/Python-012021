@@ -33,8 +33,7 @@ class Film(Polozka):
         super().__init__(name, genre)
 
     def get_info(self):
-        return f"The length of this film is {self.length} "
-
+        return f"{super().get_info()} The length of this film is {self.length}"
 
 class TvShow(Polozka):
     def __init__(self, number_episode, length_episode, name, genre):
@@ -48,3 +47,5 @@ class TvShow(Polozka):
 x = Film(180, 'Harry Potter','fantasy')
 y = TvShow(15, '60 minutes', 'Crown', 'history drama')
 print(y.get_info())
+
+
