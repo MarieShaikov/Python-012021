@@ -1,5 +1,5 @@
 import pandas
-nakupy = pandas.read_csv('../nakupy.csv')
+nakupy = pandas.read_csv('nakupy.csv')
 #print(nakupy.iloc[8:])
 greeting = " Hi  George "
 #print(greeting.strip().replace("  "," "))

@@ -34,5 +34,5 @@ print(exam.groupby('predmet')['znamka'].mean())
 print(exam.groupby('predmet')['znamka'].max())
 
 
-nakupy = pandas.read_csv('../nakupy.csv')
+nakupy = pandas.read_csv('../Week 5/nakupy.csv')
 print(nakupy.groupby('Jméno').sum())
