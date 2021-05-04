@@ -9,8 +9,8 @@
 
 import pandas
 projects = pandas.read_csv('Ukol27_data.csv')
-print(projects.iloc[:3])
-print(projects.groupby('project')["hours"].sum())
+# print(projects.iloc[:3])
+# print(projects.groupby('project')["hours"].sum())
 #Result
 
 # #F30    21.5
@@ -38,8 +38,9 @@ liberec["City"] = "Liberec"
 
 employees = pandas.concat([praha, plzen, liberec],ignore_index=True)
 offices_stats = pandas.merge(projects, employees,left_on='emloyee_id', right_on='cislo_zamestnance', suffixes=(False, False))
+
 total = (offices_stats.groupby(['City', "project"])['hours'].sum())
-print(total)
+# print(total)
 
 #Result:
 
@@ -54,3 +55,13 @@ print(total)
 #          TE1         5.2
 #          W05        25.1
 #          YLI        13.9
+
+
+#export of the table for Ukol30.py
+
+
+from openpyxl import Workbook
+offices_stats = Workbook()
+offices_stats.save("Excel_table.xlsx")
+
+
